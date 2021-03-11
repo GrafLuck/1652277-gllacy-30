@@ -150,11 +150,12 @@
 }
 
 .header-navigation-item:hover .header-navigation-link,
-.header-navigation-item:focus-within .header-navigation-link {
+.header-navigation-item:focus-within .header-navigation-link,
+.header-navigation-item:focus .header-navigation-link {
 	background: var(--basic-white);
 	border-radius: 26px;
   color: var(--special-black);
-  overflow: hidden;
+  outline: none;
 }
 
 .header-navigation-submenu {
@@ -185,9 +186,10 @@
 }
 
 .header-navigation-submenu-item:hover,
-.header-navigation-submenu-item:focus-within {
+.header-navigation-submenu-item:focus-within,
+.header-navigation-submenu-item:focus {
   background-color: var(--basic-pink);
-  overflow: hidden;
+  outline: none;
 }
 
 .header-navigation-submenu-item:active {
@@ -199,7 +201,7 @@
   border-radius: 4px 4px 0 0;
 }
 
-.header-navigation-submenu-item:last-child:hover.
+.header-navigation-submenu-item:last-child:hover,
 .header-navigation-submenu-item:first-child:focus {
   border-radius: 0 0 4px 4px;
 }
