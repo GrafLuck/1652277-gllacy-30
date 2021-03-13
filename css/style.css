@@ -38,10 +38,13 @@
   --grey-red: #696969;
 	--background-green: #849D8F;
 
+	--link-hover: #E84D37;
   --basic-orange: #F26843;
   --special-orange: #E74A35;
 
+
   --special-red-rgb: 172, 16, 0;
+	--link-hover-decoration: 232, 77, 55;
 
 	--basic-white-rgb: 255, 255, 255;
 	--basic-black-rgb: 0, 0, 0;
@@ -338,10 +341,15 @@
   position: relative;
 }
 
+.login:hover .login-form,
+.login:focus-within .login-form {
+  display: block;
+}
+
 .login-form {
   box-sizing: border-box;
   width: 277px;
-	display: grid;
+	display: none;
   grid-template-rows: min-content min-content min-content;
   grid-template-columns: 103px 119px;
   grid-template-areas: "email email"
@@ -350,6 +358,9 @@
   gap: 20px;
 
   padding: 20px 17px 22px 19px;
+	position: absolute;
+	top: 37px;
+	left: -185px;
 
   background-color: var(--special-grey);
   box-shadow: 0px 20px 20px rgba(var(--basic-black-rgb) 0.4);
@@ -392,11 +403,20 @@
   box-sizing: border-box;
   width: 241px;
   height: 44px;
-  padding: 15px;
+  padding: 10px 15px 15px 14px;
   background-color: var(--basic-white);
   border: 1px solid var(--light-grey);
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+.login-form-email::placeholder {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+
+	color: var(--dark-grey);
 }
 
 .login-form-password {
@@ -404,11 +424,20 @@
   box-sizing: border-box;
   width: 241px;
   height: 44px;
-  padding: 15px;
+	padding: 14px 15px 15px 14px;
+
   background-color: var(--basic-white);
   border: 1px solid var(--light-grey);
-  box-sizing: border-box;
   border-radius: 4px;
+}
+
+.login-form-password::placeholder {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+
+	color: var(--dark-grey);
 }
 
 .login-form-submit {
@@ -417,18 +446,72 @@
   background: linear-gradient(180deg, var(--basic-orange) 0%, var(--special-orange) 100%);
   box-shadow: 0px 1px 2px rgba(var(--special-red-rgb), 0.25);
   border-radius: 26px;
+	border: none;
+
+	padding: 12px 25px 15px 25px;
+
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 16px;
+	align-items: center;
+	color: var(--basic-white);
+	word-wrap: break-word;
 }
 
 .link-wrapper {
   grid-area: link;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 2px;
 }
 
 .restore-password {
-
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 15px;
+	color: var(--special-black);
+	text-decoration: none;
+	margin-bottom: 6px;
 }
 
 .new-registration {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 15px;
+	color: var(--special-black);
+	text-decoration: none;
+}
 
+.restore-password::after,
+.new-registration::after {
+	content: "";
+	display: block;
+	width: auto;
+	height: 1px;
+	background-color: rgba(var(--basic-grey-rgb), 0.3);
+	margin-top: -1px;
+}
+
+.restore-password:hover,
+.restore-password:focus,
+.restore-password:active,
+.new-registration:hover,
+.new-registration:focus,
+.new-registration:active {
+	color: var(--link-hover);
+}
+
+.restore-password:hover::after,
+.new-registration:hover::after,
+.restore-password:focus::after,
+.new-registration:focus::after,
+.restore-password:active::after,
+.new-registration:active::after {
+	background-color: rgba(var(--link-hover-decoration), 0.3);
 }
 
 .cart-link {
