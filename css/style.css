@@ -41,6 +41,8 @@
 	--link-hover: #E84D37;
   --basic-orange: #F26843;
   --special-orange: #E74A35;
+	--shadow-orange-hover: #AC1000;
+	--shadow-orange-active: #942718;
 
 
   --special-red-rgb: 172, 16, 0;
@@ -67,6 +69,35 @@
   overflow: hidden;
 }
 
+.button {
+  background: linear-gradient(180deg, var(--basic-orange) 0%, var(--special-orange) 100%);
+  box-shadow: 0px 1px 2px rgba(var(--special-red-rgb), 0.25);
+  border-radius: 26px;
+	border: none;
+
+	padding: 12px 25px 15px 25px;
+
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 16px;
+	color: var(--basic-white);
+	text-decoration: none;
+	word-wrap: break-word;
+}
+
+.button:hover,
+.button:focus {
+	background: linear-gradient(0deg, rgba(var(--basic-white-rgb), 0.2), rgba(var(--basic-white-rgb), 0.2)), linear-gradient(180deg, var(--basic-orange) 0%, var(--special-orange) 100%);
+	box-shadow: 0px 1px 2px var(--shadow-orange-hover);
+	outline: none;
+}
+
+.button:active {
+	background: linear-gradient(0deg, rgba(var(--basic-black-rgb), 0.07), rgba(var(--basic-black-rgb), 0.07)), linear-gradient(180deg, var(--basic-orange) 0%, var(--special-orange) 100%);
+	box-shadow: inset 0px 2px 2px var(--shadow-orange-active);
+}
+
 .page {
 	height: 100%;
 }
@@ -77,7 +108,7 @@
 	min-width: 1200px;
 	min-height: 100%;
 
-	margin-top: 9px;
+	margin-top: 10px;
 
 	grid-template-rows: min-content 1fr min-content;
 
@@ -103,11 +134,14 @@
 	grid-template-rows: min-content min-content;
 	grid-template-columns: 154px 1fr 244px;
 	grid-template-areas: "logo navigation user-menu"
-  "time-and-telephone time-and-telephone time-and-telephone";
+  ". . time-and-telephone";
+	row-gap: 2px;
 }
 
 .header-logo {
 	grid-area: logo;
+	width: 154px;
+	height: 64px;
 }
 
 .header-navigation {
@@ -390,11 +424,14 @@
 	margin-right: 8px;
 }
 
-.login:hover .login-link {
+.login:hover .login-link,
+.login:focus-within .login-link {
 	color: var(--special-black);
+	outline: none;
 }
 
-.login:hover svg path {
+.login:hover svg path,
+.login:focus-within svg path {
 	fill: var(--special-black);
 }
 
@@ -442,21 +479,6 @@
 
 .login-form-submit {
   grid-area: submit;
-
-  background: linear-gradient(180deg, var(--basic-orange) 0%, var(--special-orange) 100%);
-  box-shadow: 0px 1px 2px rgba(var(--special-red-rgb), 0.25);
-  border-radius: 26px;
-	border: none;
-
-	padding: 12px 25px 15px 25px;
-
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 16px;
-	align-items: center;
-	color: var(--basic-white);
-	word-wrap: break-word;
 }
 
 .link-wrapper {
@@ -503,6 +525,7 @@
 .new-registration:focus,
 .new-registration:active {
 	color: var(--link-hover);
+	outline: none;
 }
 
 .restore-password:hover::after,
@@ -530,4 +553,32 @@
 
 .cart-link svg {
 	margin-right: 8px;
+}
+
+.time-and-telephone {
+	font-weight: 700;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.time-of-work {
+	font-size: 14px;
+	line-height: 16px;
+	margin-bottom: 8px;
+}
+
+.telephone-number {
+	font-size: 22px;
+	line-height: 24px;
+	color: var(--basic-white);
+	text-decoration: none;
+}
+
+.telephone-number:hover,
+.telephone-number:focus,
+.telephone-number:active {
+	color: var(--link-hover);
+	outline: none;
 }
