@@ -611,6 +611,7 @@
 .slider {
   position: relative;
   padding-top: 272px;
+  margin-bottom: 42px;
 }
 
 .slider-list {
@@ -662,11 +663,71 @@
   width: 21px;
   height: 21px;
   background-color: transparent;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--basic-white);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .slider-controls-button.current {
-  background-color: #ffffff;
+  background-color: var(--basic-white);
+}
+
+.promo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+}
+
+.promo-item {
+  box-sizing: border-box;
+  width: 560px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16px 22px 22px 16px;
+}
+
+.promo-raspberry {
+  background-image: url(../img/raspberry-background.jpg);
+}
+
+.promo-chocolate {
+  background-image: url(../img/chocolate-background.jpg);
+}
+
+.promo-title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+
+.promo-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+  text-align: left;
+  margin-bottom: 42px;
+}
+
+.promo-button {
+  align-self: flex-end;
+  box-shadow: 0px 2px 2px rgba(var(--special-red-rgb), 0.64);
+  border-radius: 70px;
+  line-height: 24px;
+  text-shadow: 0px 2px 5px rgba(var(--shadow-text-button), 0.76);
+  padding: 12px 22px 12px 22px;
 }
