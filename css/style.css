@@ -37,6 +37,8 @@
   --grey: #EDEDED;
   --grey-red: #696969;
 	--background-green: #849D8F;
+  --background-grey: #8996a6;
+  --background-brown: #9d8b84;
 
 	--link-hover: #E84D37;
   --basic-orange: #F26843;
@@ -46,6 +48,7 @@
 
 
   --special-red-rgb: 172, 16, 0;
+  --shadow-text-button: 160, 32, 11;
 	--link-hover-decoration: 232, 77, 55;
 
 	--basic-white-rgb: 255, 255, 255;
@@ -70,20 +73,23 @@
 }
 
 .button {
+  display: inline-block;
   background: linear-gradient(180deg, var(--basic-orange) 0%, var(--special-orange) 100%);
   box-shadow: 0px 1px 2px rgba(var(--special-red-rgb), 0.25);
   border-radius: 26px;
 	border: none;
-
+  box-sizing: border-box;
 	padding: 12px 25px 15px 25px;
 
 	font-style: normal;
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 16px;
+  vertical-align: center;
 	color: var(--basic-white);
 	text-decoration: none;
 	word-wrap: break-word;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -120,7 +126,23 @@
 	text-align: center;
 
 	color: var(--basic-white);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.site-wrapper-1 {
 	background-color: var(--background-green);
+  background-image: url("../img/icecream-slide1.png");
+}
+
+.site-wrapper-2 {
+  background-color: var(--background-grey);
+  background-image: url("../img/icecream-slide2.png");
+}
+
+.site-wrapper-3 {
+  background-color: var(--background-brown);
+  background-image: url("../img/icecream-slide3.png");
 }
 
 .container {
@@ -216,6 +238,7 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+  z-index: 100;
 
 	background-color: var(--basic-white);
 	box-shadow: 0px 20px 20px rgba(var(--basic-black-rgb), 0.4);
@@ -344,6 +367,7 @@
   background-color: var(--special-grey);
   box-shadow: 0px 20px 20px rgba(var(--basic-black-rgb), 0.4);
   border-radius: 4px;
+  z-index: 100;
 }
 
 .search-form-input {
@@ -399,6 +423,7 @@
   background-color: var(--special-grey);
   box-shadow: 0px 20px 20px rgba(var(--basic-black-rgb) 0.4);
   border-radius: 4px;
+  z-index: 100;
 }
 
 .login:hover .login-form,
@@ -581,4 +606,67 @@
 .telephone-number:active {
 	color: var(--link-hover);
 	outline: none;
+}
+
+.slider {
+  position: relative;
+  padding-top: 272px;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide-item {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.slide-button {
+  font-size: 32px;
+  line-height: 44px;
+  text-shadow: 0 2px 5px rgba(var(--shadow-text-button), 0.76);
+  border-radius: 70px;
+  box-shadow: 0 2px 2px rgba(var(--special-red-rgb), 0.64);
+  padding: 9px 23px 9px 23px;
+  letter-spacing: 0.05em;
+  margin-left: -16px;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 21px;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+}
+
+.slider-controls-button {
+  padding: 0;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls-button.current {
+  background-color: #ffffff;
 }
