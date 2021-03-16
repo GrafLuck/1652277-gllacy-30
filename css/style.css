@@ -747,16 +747,34 @@
 }
 
 .goods-item {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column-reverse;
   width: 267px;
+  position: relative;
 }
 
-.goods-item:hover {
+.goods-hover {
+  display: none;
+  position: absolute;
+  top: -6px;
+  left: -13px;
+
   background-color: rgba(var(--basic-white-rgb), 0.2);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 6px 13px 21px 13px;
+  width: 293px;
+  height: 402px;
+}
+
+.goods-item:hover .goods-hover {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+
+.goods-button {
+  margin-bottom: 21px;
 }
 
 .goods-title {
