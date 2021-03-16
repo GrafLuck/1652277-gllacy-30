@@ -104,6 +104,12 @@
 	box-shadow: inset 0px 2px 2px var(--shadow-orange-active);
 }
 
+.text-decoration {
+  text-decoration-line: underline;
+  text-underline-offset: 1px;
+  text-decoration-color: rgba(var(--basic-white-rgb), 0.2);
+}
+
 .page {
 	height: 100%;
 }
@@ -209,10 +215,6 @@
 	line-height: 18px;
 	font-weight: 700;
 	color: var(--basic-white);
-}
-
-.header-link-decoration {
-  border-bottom: 1px solid rgba(var(--basic-white-rgb), 0.2);
 }
 
 .header-navigation-item:hover .header-navigation-link,
@@ -672,6 +674,10 @@
   background-color: var(--basic-white);
 }
 
+.promo {
+  margin-bottom: 40px;
+}
+
 .promo-list {
   margin: 0;
   padding: 0;
@@ -730,4 +736,81 @@
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(var(--shadow-text-button), 0.76);
   padding: 12px 22px 12px 22px;
+}
+
+.goods-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods-item {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 267px;
+}
+
+.goods-item:hover {
+  background-color: rgba(var(--basic-white-rgb), 0.2);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 6px 13px 21px 13px;
+}
+
+.goods-title {
+  margin: 0;
+  margin-top: 7px;
+  padding: 0;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.goods-inner {
+  position: relative;
+}
+
+.goods-inner::before {
+  content: "";
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background-color: var(--basic-white);
+  background-image: url("../img/icon-hit.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.goods-price {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 19px;
+  left: 0px;
+
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  text-shadow: 0px 1px 3px rgba(var(--basic-grey-rgb), 0.5);
+}
+
+.goods-price span {
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+}
+
+.goods-image {
+  border-radius: 50%;
+}
+
+
+.goods-button {
+  display: block;
+  order: -1;
 }
