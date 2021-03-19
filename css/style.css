@@ -1077,3 +1077,25 @@
 .сontacts-button {
   padding: 14px 28px 14px 28px;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-item {
+  width: 32px;
+  height: 32px;
+  background-image: url(../img/icon-facebook.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  margin-right: 12px;
+}
