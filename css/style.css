@@ -766,6 +766,7 @@
 .goods-button {
   display: none;
   padding: 12px 16px 12px 16px;
+  z-index: 2;
 }
 
 .goods-item:hover .goods-button {
@@ -910,6 +911,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 26px;
+  margin-bottom: 40px;
 }
 
 .blog {
@@ -1002,4 +1004,76 @@
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(var(--shadow-text-button), 0.76);
   padding: 10px 19px 10px 19px;
+}
+
+.contacts {
+  text-align: left;
+}
+
+.contacts-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contacts-info {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  background-color: var(--basic-white);
+  border-radius: 16px;
+  width: 303px;
+  top: 62px;
+  right: 27px;
+}
+
+.contacts-address {
+  margin-bottom: 24px;
+}
+
+.contacts-address p {
+  margin: 0px;
+  margin-bottom: -2px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: var(--special-black);
+}
+
+.contacts-address address {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: var(--special-black);
+}
+
+.contacts-phone {
+  margin-bottom: 27px;
+}
+
+.contacts-phone p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--special-black);
+}
+
+.contacts-phone a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: var(--special-black);
+  text-decoration: none;
+}
+
+.сontacts-button {
+  padding: 14px 28px 14px 28px;
 }
