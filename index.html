@@ -316,19 +316,21 @@
         </div>
       </footer>
     </div>
-    <!-- <section>
-      <h2>Форма обратной связи</h2>
-      <p>Мы обязательно вам ответим!</p>
-      <form action="#" method="POST">
-        <input type="text" placeholder="Имя Фамилия" id="id-name">
-        <label for="id-name">Введите свои имя и фамилию</label>
-        <input type="email" placeholder="email@example.com" id="id-email-feedback" name="email-feedback-field">
-        <label for="id-email-feedback">Введите свой email</label>
-        <textarea placeholder="В свободной форме" rows="10" cols="60" id="id-text" name="text-field"></textarea>
-        <label for="id-text">Введите текст письма</label>
-        <button type="submit">Отправить</button>
-      </form>
-      <button type="button" aria-label="Закрыть форму обратной связи"></button>
-    </section> -->
+    <section class="modal-feedback">
+      <div class="modal-feedback-wrapper">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <p class="modal-feedback-text">Мы обязательно вам ответим!</p>
+        <form class="modal-feedback-form" action="#" method="POST">
+          <input class="modal-feedback-input" type="text" placeholder="Имя Фамилия" id="id-name">
+          <label class="visually-hidden" for="id-name">Введите свои имя и фамилию</label>
+          <input class="modal-feedback-input" type="email" placeholder="email@example.com" id="id-email-feedback" name="email-feedback-field">
+          <label class="visually-hidden" for="id-email-feedback">Введите свой email</label>
+          <textarea class="modal-feedback-textarea" placeholder="В свободной форме" rows="10" cols="40" id="id-text" name="text-field"></textarea>
+          <label class="visually-hidden" for="id-text">Введите текст письма</label>
+          <button class="button modal-feedback-button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-feedback-close" type="button" aria-label="Закрыть форму обратной связи"></button>
+      </div>
+    </section>
   </body>
 </html>
