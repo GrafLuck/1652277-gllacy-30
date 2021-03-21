@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-body" style="background-color: #849D8F">
+<body class="page-body site-wrapper-catalog">
   <header class="container header-grid">
       <a class="header-logo">
         <img src="img/logo.svg" alt="Магазин мороженного Глейси Шоп" width="154" height="64">
@@ -115,7 +115,7 @@
                 <th>Цена товара</th>
                 <th>Стоимость товара</th>
               </tr>
-              <tr class="row-1">
+              <tr class="row">
                 <td class="column-1">
                   <button class="delete-good" type="button" aria-label="Удалить товар"></button>
                 </td>
@@ -128,7 +128,7 @@
                 <td class="column-6">200 руб.</td>
                 <td class="column-7">300 руб.</td>
               </tr>
-              <tr class="row-2">
+              <tr class="row">
                 <td class="column-1">
                   <button class="delete-good" type="button" aria-label="Удалить товар"></button>
                 </td>
@@ -188,12 +188,14 @@
       <form class="filter" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="sort">
           <legend class="form-title">Сортировка:</legend>
-          <select class="sort-select" name="sort">
+          <div class="sort-select-wrapper">
+            <select class="sort-select" name="sort">
               <option class="sort-option" value="popular" selected>по популярности</option>
               <option class="sort-option" value="cheap" >сначала недорогие</option>
               <option  class="sort-option" value="expensive">сначала дорогие</option>
               <option class="sort-option" value="fat">по жирности</option>
           </select>
+          </div>
         </fieldset>
         <fieldset class="filter-price">
           <legend class="form-title">Цена:

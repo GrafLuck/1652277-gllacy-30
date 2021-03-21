@@ -38,6 +38,7 @@
   --dark-grey: #999999;
   --grey: #ededed;
   --grey-red: #696969;
+  --grey-table: #CACAC7;
   --background-green: #849d8f;
   --background-grey: #8996a6;
   --background-brown: #9d8b84;
@@ -184,6 +185,10 @@
 .site-wrapper-3 {
   background-color: var(--background-brown);
   background-image: url("../img/icecream-slide3.png");
+}
+
+.site-wrapper-catalog {
+  background-color: var(--background-green);
 }
 
 .container {
@@ -968,7 +973,7 @@
   left: -420px;
   box-sizing: border-box;
   width: 539px;
-  padding: 14px 14px 21px 18px;
+  padding: 19px 14px 21px 18px;
   background: var(--special-grey);
   box-shadow: 0px 20px 20px rgba(var(--basic-black-rgb), 0.4);
   border-radius: 4px;
@@ -985,10 +990,11 @@
 .cart-list-table {
   width: 510px;
   margin-bottom: 15px;
+  border-collapse: collapse;
 }
 
-.row-2 td {
-  padding-top: 10px;
+.cart-list-table td {
+  min-height: 33px;
 }
 
 .delete-good {
@@ -1006,11 +1012,12 @@
 
 .column-1 {
   width: 20px;
+  padding-top: 0px;
+  padding-left: 0px;
 }
 
 .column-2 {
   width: 45px;
-  padding: 0;
 }
 
 .column-3 {
@@ -1035,10 +1042,6 @@
   width: 90px;
 }
 
-.row-2 .column-3 {
-  padding-top: 24px;
-}
-
 .total {
   text-align: right;
   font-weight: bold;
@@ -1046,8 +1049,16 @@
   line-height: 16px;
 }
 
-.row-total {
-  padding-top: 10px;
+.row:not(:first-child) td {
+  padding-bottom: 20px;
+}
+
+.row:nth-last-child(2) td {
+  border-bottom: 1px solid var(--grey-table);
+}
+
+.row-total td {
+  padding-top: 15px;
 }
 
 .cart-list-button {
@@ -2370,6 +2381,10 @@
   margin-bottom: 6px;
 }
 
+.sort-select-wrapper {
+  position: relative;
+}
+
 .sort-select {
   background-color: rgba(var(--basic-white-rgb), 0.2);
   border-radius: 20px;
@@ -2387,10 +2402,26 @@
   appearance: none;
 }
 
+.sort-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  width: 11px;
+  height: 10px;
+  background-image: url(../img/icon-arrow-light.svg);
+  z-index: -2;
+}
+
 .sort-select:hover,
 .sort-select:focus {
   color: var(--special-black);
   outline: none;
+}
+
+.sort-select-wrapper:hover::after,
+.sort-select-wrapper:focus::after {
+  background-image: url(../img/icon-arrow-dark.svg);
 }
 
 .sort-option {
