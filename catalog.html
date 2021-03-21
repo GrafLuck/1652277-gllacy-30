@@ -15,9 +15,9 @@
       </a>
       <nav class="header-navigation">
         <ul class="header-navigation-list">
-          <li class="header-navigation-item">
+          <li class="header-navigation-item header-current-navigation-item">
             <a class="header-navigation-link" href="#">
-              <span class="text-decoration">Каталог</span>
+              <span>Каталог</span>
             </a>
             <ul class="header-navigation-submenu">
               <li class="header-navigation-submenu-item">
@@ -94,21 +94,73 @@
             </div>
           </form>
         </div>
-        <div class="user-menu-item cart">
-          <a class="cart-link">
+        <div class="user-menu-item cart ">
+          <a class="cart-link cart-non-empty" href="#">
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
-                fill="white" />
-              <path
-                d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z"
-                fill="white" />
-              <path
-                d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z"
-                fill="white" />
+              <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="#343434"/>
+              <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="#343434"/>
+              <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="#343434"/>
+              <path d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="#E84D37"/>
             </svg>
-            <span>Пусто</span>
+            <span class="cart-link-text">2 товара</span>
           </a>
+          <div class="cart-list">
+            <table class="cart-list-table">
+              <tr class="visually-hidden">
+                <th>Удалить товар из корзины</th>
+                <th>Изображение товара</th>
+                <th>Название товара</th>
+                <th>Масса товара</th>
+                <th>Знак умножения</th>
+                <th>Цена товара</th>
+                <th>Стоимость товара</th>
+              </tr>
+              <tr class="row-1">
+                <td class="column-1">
+                  <button class="delete-good" type="button" aria-label="Удалить товар"></button>
+                </td>
+                <td class="column-2">
+                  <img src="/img/orange-icecream.jpg" width="33" height="33">
+                </td>
+                <td class="column-3">Пломбир с апельсиновым джемом</td>
+                <td class="column-4">1,5 кг</td>
+                <td class="column-5">х</td>
+                <td class="column-6">200 руб.</td>
+                <td class="column-7">300 руб.</td>
+              </tr>
+              <tr class="row-2">
+                <td class="column-1">
+                  <button class="delete-good" type="button" aria-label="Удалить товар"></button>
+                </td>
+                <td class="column-2">
+                  <img src="/img/strawberry-icecream.jpg" width="33" height="33">
+                </td>
+                <td class="column-3">Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td class="column-4">1,5 кг</td>
+                <td class="column-5">х</td>
+                <td class="column-6">300 руб.</td>
+                <td class="column-7">450 руб.</td>
+              </tr>
+              <tr class="row-total">
+                <td class="total" colspan="7">Итого: 750 руб.</td>
+              </tr>
+            </table>
+            <a class="button cart-list-button" href="#">Оформить заказ</a>
+          </div>
+          <form class="login-form" action="#" method="POST">
+            <input class="login-form-email" type="email" placeholder="email@example.com" id="id-email"
+              name="email-field">
+            <label class="visually-hidden" for="id-email">Введите свой email</label>
+            <input class="login-form-password" type="password" placeholder="&#8729;&#8729;&#8729;&#8729;&#8729;&#8729;"
+              id="id-password" name="password-field">
+            <label class="visually-hidden" for="id-password">Введите свой
+              пароль</label>
+            <button class="button login-form-submit" type="submit">Войти</button>
+            <div class="link-wrapper">
+              <a class="restore-password" href="#">Забыли пароль?</a>
+              <a class="new-registration" href="#">Новая регистрация</a>
+            </div>
+          </form>
         </div>
       </div>
       <div class="time-and-telephone">
@@ -214,7 +266,7 @@
     <section class="goods-catalog">
       <h2 class="visually-hidden">Список мороженного</h2>
       <ul class="goods-list-catalog">
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           <div class="goods-inner">
             <img class="goods-image" src="img/orange-icecream.jpg" alt="" width="267" height="267">
@@ -222,7 +274,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочно-кофейное с кусочками
             шоколада</h3>
           <div class="goods-inner">
@@ -231,7 +283,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочно-клубничное&nbsp;с присыпкой из белого шоколада</h3>
           <div class="goods-inner">
             <img class="goods-image" src="img/strawberry-icecream.jpg" alt="" width="267" height="267">
@@ -239,7 +291,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочное крем-брюле
             с&nbsp;карамельной подливкой </h3>
           <div class="goods-inner">
@@ -248,7 +300,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочное с брусничным
             джемом</h3>
           <div class="goods-inner">
@@ -257,7 +309,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочно-черничное с цельными ягодами черники</h3>
           <div class="goods-inner">
             <img class="goods-image" src="img/icecream-catalog-6.jpg" alt="" width="267" height="267">
@@ -265,7 +317,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочно-лимонное с карамельной присыпкой</h3>
           <div class="goods-inner">
             <img class="goods-image" src="img/icecream-catalog-7.jpg" alt="" width="267" height="267">
@@ -273,7 +325,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочное с шоколадной стружкой</h3>
           <div class="goods-inner">
             <img class="goods-image" src="img/icecream-catalog-8.jpg" alt="" width="267" height="267">
@@ -281,7 +333,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочно-ванильное
             с&nbsp;кусочками&nbsp;шоколада</h3>
           <div class="goods-inner">
@@ -290,7 +342,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочноe с ментоловым
             сиропом</h3>
           <div class="goods-inner">
@@ -299,7 +351,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочное с кусочками черного шоколада</h3>
           <div class="goods-inner">
             <img class="goods-image" src="img/icecream-catalog-11.jpg" alt="" width="267" height="267">
@@ -307,7 +359,7 @@
           </div>
           <a class="button goods-button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods-item">
+        <li class="goods-item" tabindex="0">
           <h3 class="goods-title text-decoration">Сливочное с мятным сиропом</h3>
           <div class="goods-inner">
             <img class="goods-image" src="img/icecream-catalog-12.jpg" alt="" width="267" height="267">
@@ -318,30 +370,34 @@
       </ul>
       <ul class="pagination-list">
         <li class="pagination-item ">
-          <a class="catalog-button pagination-button">Предыдущая</a>
+          <a class="pagination-button previous-pagination-button pagination-button-disabled">
+            <span class="visually-hidden">Предыдущая страница</span>
+          </a>
         </li>
         <li class="pagination-item ">
-          <a class="catalog-button pagination-button-current">1</a>
+          <a class="pagination-button-current">1</a>
         </li>
         <li class="pagination-item">
-          <a class="catalog-button pagination-button" href="#">2</a>
+          <a class="pagination-button" href="#">2</a>
         </li>
         <li class="pagination-item">
-          <a class="catalog-button pagination-button" href="#">3</a>
+          <a class="pagination-button" href="#">3</a>
         </li>
         <li class="pagination-item">
-          <a class="catalog-button pagination-button" href="#">4</a>
+          <a class="pagination-button" href="#">4</a>
         </li>
         <li class="pagination-item">
-          <a class="catalog-button pagination-button" href="#">5</a>
+          <a class="pagination-button" href="#">5</a>
         </li>
         <li class="pagination-item">
-          <a class="catalog-button pagination-button next-pagination-button" href="#">Следующая</a>
+          <a class="pagination-button next-pagination-button" href="#">
+            <span class="visually-hidden">Следующая</span>
+          </a>
         </li>
       </ul>
     </section>
   </main>
-  <footer class="footer container">
+  <footer class="footer footer-catalog container">
     <ul class="social-list">
       <li class="social-item">
         <a class="social-link social-link-fb" href="#">
